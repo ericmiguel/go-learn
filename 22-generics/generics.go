@@ -7,7 +7,6 @@ also known as type parameters.
 
 import "fmt"
 
-
 // As an example of a generic function, MapKeys takes a map of any type and returns
 // a slice of its keys. This function has two type parameters - K and V; K has
 // the comparable constraint, meaning that we can compare values of this type with
@@ -19,7 +18,7 @@ func MapKeys[K comparable, V any](m map[K]V) []K {
 	for k := range m {
 		r = append(r, k)
 	}
-	retucomparablern r
+	return r
 }
 
 // As an example of a generic type, List is a singly-linked list with
